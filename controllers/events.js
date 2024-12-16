@@ -67,12 +67,11 @@ const actualizarEvento = async (req, res = response) => {
     });
   } catch (error) {
     console.log(error);
-    return res.status(500).json({
+    return res.status(501).json({
       ok: false,
       msg: 'Hable con el administrador',
     });
   }
-
 };
 
 const eliminarEvento = async (req, res = response) => {
@@ -100,7 +99,6 @@ const eliminarEvento = async (req, res = response) => {
     return res.json({
       ok: true,
     });
-
   } catch (error) {
     console.log(error);
     res.status(500).json({
